@@ -1,0 +1,48 @@
+def calculate_square_area_perimeter():
+    side_length = float(input("Enter the side length of the square: "))
+    area = side_length ** 2
+    perimeter = 4 * side_length
+    print(f"Square area: {area}")
+    print(f"Square perimeter: {perimeter}")
+
+def calculate_rectangle_area_perimeter():
+    length = float(input("Enter the length of the rectangle: "))
+    width = float(input("Enter the width of the rectangle: "))
+    area = length * width
+    perimeter = 2 * (length + width)
+    print(f"Rectangle area: {area}")
+    print(f"Rectangle perimeter: {perimeter}")
+
+def calculate_circle_area_circumference():
+    radius = float(input("Enter the radius of the circle: "))
+    area = 3.1415 * radius ** 2
+    circumference = 2 * 3.1415 * radius
+    print(f"Circle area: {area}")
+    print(f"Circle circumference: {circumference}")
+
+def main():
+    while True:
+        print("\nShape Calculator Menu:")
+        print("1. Square")
+        print("2. Rectangle")
+        print("3. Circle")
+        print("4. Exit")
+
+        choice = input("Enter your choice: ")
+
+        if choice == '1':
+            calculate_square_area_perimeter()
+        elif choice == '2':
+            calculate_rectangle_area_perimeter()
+        elif choice == '3':
+            calculate_circle_area_circumference()
+        elif choice == '4':
+            print("Exiting the program...")
+            break
+        else:
+            print("Invalid choice. Please enter a number between 1 and 4.")
+
+        input("Press any key to return to the main menu...")
+
+if __name__ == "__main__":
+    main()
